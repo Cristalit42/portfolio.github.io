@@ -1,5 +1,16 @@
 $(function(){
 
+  $('.story__slider').slick({
+    arrows: false,
+    slidesToShow: 1,
+    infinite: true,
+    draggable: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  })
+
+
+
   $('.review__slider').slick({
     arrows: false,
     slidesToShow: 1,
