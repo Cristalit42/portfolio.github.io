@@ -1318,6 +1318,27 @@ body {
 //============================ 800================================
 
 @media(max-width: 800px) {
+
+  .header__nav-list,
+  .header__nav-item {
+    &:first-child {
+      display: none;
+    }
+  }
+
+  .header__nav-link {
+    font-size: 14px;
+  }
+
+  .header__btn {
+    white-space: nowrap;
+    font-size: 12px;
+
+    &::after {
+      display: none;
+    }
+  }
+
   .working__content {
     flex-direction: column;
   }
@@ -1358,6 +1379,19 @@ body {
 //============================ 600================================
 
 @media(max-width:600px) {
+  .header__img-box {
+    transform: scale(0.75);
+    margin-right: 10px;
+  }
+
+  .header__nav {
+    margin: 0 auto;
+  }
+
+  .header__btn {
+    display: none;
+  }
+
   .working__list-item {
     margin-bottom: 5px;
   }
