@@ -373,7 +373,7 @@ body {
   display: flex;
   margin-bottom: 48px;
   height: 200px;
-  max-width: 500px;
+  width: 100%;
 }
 
 .working__img-box {
@@ -1425,8 +1425,8 @@ body {
             flex-direction: column;
   }
   .working__content-list {
-    margin: 0;
     margin-bottom: 20px;
+    margin-right: 0px;
   }
   .working__list-item {
     margin-bottom: -30px;
@@ -1478,6 +1478,8 @@ body {
   }
   .working__list-item {
     margin-bottom: 20px;
+    width: 300px;
+    height: auto;
   }
   .benefits__title {
     font-size: 40px;
