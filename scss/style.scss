@@ -386,38 +386,42 @@ body {
 
 .story__inner {
   background-color: $base-bg-secondary;
-  height: 700px;
+  height: 800px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   margin: 115px 0px;
 }
 
 .story__content {
-  width: 588px;
-  margin-left: 95px;
+  max-width: 588px;
+  margin-top: 40px;
 }
 
 .story__content-title {
   @include text-style (700, 42px, 124%, $base-text-primary);
   margin-bottom: 32px;
+  text-align: center;
 }
 
 .story__content-text {
   @include text-style (400, 42px, 124%, $base-text-secondary);
   margin-bottom: 32px;
+  text-align: center;
 }
 
-.story__content-logo {}
+.story__slider-wrapper {
+  height: 520px;
+  width: 1000px;
+  margin-bottom: 40px;
+}
+.story__slider, .slick-list {
+  max-width: 1000px;
+}
+.story__slide {
+}
 
-.story__btn-box {}
-
-.story__btn {}
-
-
-.story__img-box {}
-
-.story__img {}
 
 // ===================!!!END STORY!!================================
 
@@ -448,6 +452,7 @@ body {
 
 .process__list-item {
   width: 255px;
+  height: 220px;
 }
 
 .process__decor {
@@ -1209,6 +1214,25 @@ body {
 //==================== BREAK POINTS======================
 
 
+//============================ 1100================================
+//============================ 1100================================
+
+@media(max-width:1100px){
+  .story__slide-img,
+  .story__slider-wrapper{
+    width: 500px;
+  }
+}
+
+
+
+//============================ 1100================================
+//============================ 1100================================
+
+
+
+
+
 //============================ 1000================================
 //============================ 1000================================
 @media(max-width:1000px) {
@@ -1395,6 +1419,19 @@ body {
 
   .working__list-item {
     margin-bottom: 5px;
+  }
+
+.story__inner{
+  height: 600px;
+}
+
+  .story__content-title, .story__content-text{
+    font-size: 35px;
+  }
+
+  .story__slide-img,
+  .story__slider-wrapper{
+    width: 300px;
   }
 }
 
