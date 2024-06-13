@@ -416,11 +416,13 @@ body {
   width: 1000px;
   margin-bottom: 40px;
 }
-.story__slider, .slick-list {
+
+.story__slider,
+.slick-list {
   max-width: 1000px;
 }
-.story__slide {
-}
+
+.story__slide {}
 
 
 // ===================!!!END STORY!!================================
@@ -600,6 +602,31 @@ body {
 
 .footer__btn {
   color: $base-text-on-dark;
+  position: relative;
+  transition: all .3s;
+
+  &:hover {
+    color: $base-text-alt;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $base-text-on-dark;
+    transform: scaleX(0);
+    // transform-origin: bottom right;
+    transition: all .3s;
+
+  }
+
+  &:hover::before {
+    transform: scaleX(1);
+    // transform-origin: bottom left;
+  }
 
   &::after {
     content: "";
@@ -689,6 +716,7 @@ body {
 
 .main__solutions {
   background-color: $global-dark;
+  padding-bottom: 100px;
 }
 
 .solutions__inner {}
@@ -708,9 +736,13 @@ body {
 }
 
 .solutions__content-list {
-  display: flex;
-  align-items: center;
-  margin-bottom: 30px;
+  display: grid;
+  grid-template: repeat(2, 1fr)/ repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 40px;
+  // display: flex;
+  // align-items: center;
+  // margin-bottom: 30px;
 
   &:last-child {
     margin-bottom: 0px;
@@ -723,11 +755,6 @@ body {
   width: 350px;
   height: 354px;
   background-color: $base-text-on-dark;
-  margin-inline-end: 30px;
-
-  &:last-child {
-    margin-right: 0px;
-  }
 }
 
 .solutions__img-box {}
@@ -1207,6 +1234,102 @@ body {
 
 .office__btn {}
 
+// ===================!!!START PORTFOLIO!!================================
+
+.main__portflio {
+  margin-top: 82px;
+}
+
+.portfolio__inner {
+  margin-top: 127px;
+}
+
+.portfolio__title {
+  @include text-style (700, 52px, 119%, $base-text-primary);
+}
+
+
+.portfolio__content {
+
+}
+
+.portfolio__content-item {
+  display: flex;
+  align-items: top;
+  justify-content: space-between;
+  margin-left: 65px;
+  margin-top: 65px;
+}
+
+.portfolio__item-descr {
+
+}
+
+.portfolio__descr-title {
+  @include text-style (700, 52px, 104%, $base-text-primary);
+
+}
+
+.portfolio__descr-list {
+  margin-top: 44px;
+}
+
+.portfolio__list-item {
+  display: flex;
+  margin-bottom: 40px;
+
+  &:last-child{
+    margin-bottom:35px;
+  }
+
+  &::before{
+    content: "";
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background-color: $global-primary;
+    border-radius: 100%;
+  }
+}
+
+.portfolio__list-content{
+  margin-top: -5px;
+  margin-left: 20px;
+}
+
+.portfolio__list-title {
+  @include text-style (700, 20px, 170%,  #18191f);
+
+}
+
+.portfolio__list-text {
+  @include text-style (400, 16px, 162%,  #18191f);
+
+}
+
+.portfolio__img-box {
+  width: 450px;
+  height: 320px;
+  margin-right: 25px;
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.portfolio__img {}
+
+
+.portfolio__row{
+  width: 100%;
+  height: 2px;
+  background-color: $base-boarder;
+  margin: 65px 0px;
+}
+
+// ===================!!!END PORTFOLIO!!================================
+
+
+
+
 // ===================!!!END OFFICE!!================================
 
 //==================== BREAK POINTS======================
@@ -1217,9 +1340,10 @@ body {
 //============================ 1100================================
 //============================ 1100================================
 
-@media(max-width:1100px){
+@media(max-width:1100px) {
+
   .story__slide-img,
-  .story__slider-wrapper{
+  .story__slider-wrapper {
     width: 500px;
   }
 }
@@ -1370,7 +1494,7 @@ body {
 
   .working__content-list {
     margin-bottom: 20px;
-    margin-right: 0px; 
+    margin-right: 0px;
   }
 
   .working__list-item {
@@ -1421,16 +1545,17 @@ body {
     margin-bottom: 5px;
   }
 
-.story__inner{
-  height: 600px;
-}
+  .story__inner {
+    height: 600px;
+  }
 
-  .story__content-title, .story__content-text{
+  .story__content-title,
+  .story__content-text {
     font-size: 35px;
   }
 
   .story__slide-img,
-  .story__slider-wrapper{
+  .story__slider-wrapper {
     width: 300px;
   }
 }
